@@ -218,8 +218,8 @@ def Hello(message):
     bot.send_message(message.chat.id, "Привет, {0.first_name}🤪. Меня зовут {1.first_name}. Если хочешь узнать погоду нажми кнопку ПОГОДА, выбрав день".
                      format(message.from_user, bot.get_me()), reply_markup=markup)
     #второй поток
-    #th = Thread(target=Time(message))
-    #th.start()
+    th = Thread(target=Time(message))
+    th.start()
     
 @bot.message_handler(content_types=['text'])
 def Weather(message):
@@ -250,3 +250,4 @@ while True:
     except Exception as e:
 
         print(e)
+
