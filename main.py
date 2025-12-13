@@ -7,6 +7,7 @@ from telebot import types
 from datetime import datetime
 from threading import Thread
 import schedule
+from TOKEN import *
 
 #запускаем поток для отправки каждые 3 часа температуры после нажатия кнопки start
 def Time(message): 
@@ -257,8 +258,6 @@ def Weekday(numberweekday):
 url = "https://yandex.ru/pogoda/ru"    
 driver = init_webdriver()
 
-#Создание бота ТГ
-TOKEN = "8305337492:AAFZF9M5NZndGooGBp44_9reT9uKXcBjf38"
 bot = telebot.TeleBot(TOKEN)
 
 day1= 0
